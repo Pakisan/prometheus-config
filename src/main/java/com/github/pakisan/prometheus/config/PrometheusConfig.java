@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config;
 
 import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
+import com.github.pakisan.prometheus.config.storage.PrometheusStorageConfig;
 import com.github.pakisan.prometheus.config.tracing.PrometheusTracingConfig;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -62,7 +63,7 @@ public class PrometheusConfig {
     /**
      * Storage related settings that are runtime reloadable.
      */
-    private Object storage;
+    private PrometheusStorageConfig storage;
 
     /**
      * Configures exporting traces.
