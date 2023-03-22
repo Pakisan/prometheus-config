@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,6 +16,7 @@ import java.util.Map;
  * @author Pavel Bodiachevskii
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class PrometheusGlobalSection {
@@ -22,18 +24,21 @@ public class PrometheusGlobalSection {
     /**
      * How frequently to scrape targets by default.
      */
+    @Builder.Default
     @Pattern(regexp = "((([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?|0)")
     private String scrape_interval = "1m";
 
     /**
      * How long until a scrape request times out.
      */
+    @Builder.Default
     @Pattern(regexp = "((([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?|0)")
     private String scrape_timeout = "10s";
 
     /**
      * How frequently to evaluate rules.
      */
+    @Builder.Default
     @Pattern(regexp = "((([0-9]+)y)?(([0-9]+)w)?(([0-9]+)d)?(([0-9]+)h)?(([0-9]+)m)?(([0-9]+)s)?(([0-9]+)ms)?|0)")
     private String evaluation_interval = "1m";
 
