@@ -1,4 +1,4 @@
-package com.github.pakisan.prometheus.config.scrape.auth;
+package com.github.pakisan.prometheus.config.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Describes Prometheus scrape basic authorization.
+ * Describes Prometheus authorization.
  *
  * @since  1.0.0
  * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config">scrape_config</a>

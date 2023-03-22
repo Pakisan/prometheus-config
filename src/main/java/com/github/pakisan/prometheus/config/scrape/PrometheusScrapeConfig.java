@@ -1,9 +1,9 @@
 package com.github.pakisan.prometheus.config.scrape;
 
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
-import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeAuthorization;
-import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeBasicAuth;
-import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeOAuth2;
+import com.github.pakisan.prometheus.config.auth.PrometheusScrapeAuthorization;
+import com.github.pakisan.prometheus.config.auth.PrometheusScrapeBasicAuth;
+import com.github.pakisan.prometheus.config.auth.PrometheusScrapeOAuth2;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

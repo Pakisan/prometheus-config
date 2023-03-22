@@ -1,4 +1,4 @@
-package com.github.pakisan.prometheus.config.scrape.auth;
+package com.github.pakisan.prometheus.config.auth;
 
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import lombok.AllArgsConstructor;
@@ -10,13 +10,14 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Describes Prometheus scrape_config OAuth2.
+ * Describes Prometheus oauth2.
  * <p>
  * OAuth 2.0 authentication using the client credentials grant type. Prometheus fetches an access token from the
  * specified endpoint with the given client access and secret keys.
  *
  * @since  1.0.0
  * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#oauth2">oauth2</a>
+ * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config">scrape_config</a>
  * @author Pavel Bodiachevskii
  */
 @Data
