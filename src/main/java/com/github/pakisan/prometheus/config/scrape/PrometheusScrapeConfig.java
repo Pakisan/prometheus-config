@@ -1,7 +1,9 @@
 package com.github.pakisan.prometheus.config.scrape;
 
+import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeAuthorization;
 import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeBasicAuth;
+import com.github.pakisan.prometheus.config.scrape.auth.PrometheusScrapeOAuth2;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -123,7 +125,7 @@ public class PrometheusScrapeConfig {
      * <p>
      * Cannot be used at the same time as basic_auth or authorization.
      */
-    private Object oauth2;
+    private PrometheusScrapeOAuth2 oauth2;
 
     /**
      * Configure whether scrape requests follow HTTP 3xx redirects.
@@ -138,7 +140,7 @@ public class PrometheusScrapeConfig {
     /**
      * Configures the scrape request's TLS settings.
      */
-    private Object tls_config;
+    private PrometheusTlsConfig tls_config;
 
     /**
      * Optional proxy URL.
