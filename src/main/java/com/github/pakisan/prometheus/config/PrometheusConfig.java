@@ -1,5 +1,6 @@
 package com.github.pakisan.prometheus.config;
 
+import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,7 +39,7 @@ public class PrometheusConfig {
     /**
      * A list of scrape configurations.
      */
-    private List<Object> scrape_configs;
+    private List<PrometheusScrapeConfig> scrape_configs;
 
     /**
      * Alerting specifies settings related to the Alertmanager.
