@@ -434,4 +434,65 @@ public class PrometheusScrapeConfig {
      */
     private List<Object> metric_relabel_configs;
 
+    /**
+     * An uncompressed response body larger than this many bytes will cause the
+     * <p>
+     * scrape to fail. 0 means no limit. Example: 100MB.
+     * <p>
+     * This is an experimental feature, this behaviour could
+     * <p>
+     * change or be removed in the future.
+     */
+    @Pattern(regexp = "\\d+B|\\d+KB|\\d+MB|\\d+GB|\\d+TB|\\d+PB|\\d+EB")
+    private String body_size_limit = "0";
+
+    /**
+     * Per-scrape limit on number of scraped samples that will be accepted.
+     * <p>
+     * If more than this number of samples are present after metric relabeling
+     * <p>
+     * the entire scrape will be treated as failed. 0 means no limit.
+     */
+    private int sample_limit = 0;
+
+    /**
+     * Per-scrape limit on number of labels that will be accepted for a sample. If
+     * <p>
+     * more than this number of labels are present post metric-relabeling, the
+     * <p>
+     * entire scrape will be treated as failed. 0 means no limit.
+     */
+    private int label_limit = 0;
+
+    /**
+     * Per-scrape limit on length of labels name that will be accepted for a sample.
+     * <p>
+     * If a label name is longer than this number post metric-relabeling, the entire
+     * <p>
+     * scrape will be treated as failed. 0 means no limit.
+     */
+    private int label_name_length_limit = 0;
+
+    /**
+     * Per-scrape limit on length of labels value that will be accepted for a sample.
+     * <p>
+     * If a label value is longer than this number post metric-relabeling, the
+     * <p>
+     * entire scrape will be treated as failed. 0 means no limit.
+     */
+    private int label_value_length_limit = 0;
+
+    /**
+     * Per-scrape config limit on number of unique targets that will be
+     * <p>
+     * accepted. If more than this number of targets are present after target
+     * <p>
+     * relabeling, Prometheus will mark the targets as failed without scraping them.
+     * <p>
+     * 0 means no limit. This is an experimental feature, this behaviour could
+     * <p>
+     * change in the future.
+     */
+    private int target_limit = 0;
+
 }
