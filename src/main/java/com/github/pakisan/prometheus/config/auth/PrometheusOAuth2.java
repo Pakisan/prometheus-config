@@ -24,7 +24,7 @@ import java.util.Map;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PrometheusScrapeOAuth2 {
+public class PrometheusOAuth2 {
 
 
     private String client_id;

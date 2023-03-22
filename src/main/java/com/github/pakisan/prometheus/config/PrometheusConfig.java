@@ -57,8 +57,10 @@ public class PrometheusConfig {
 
     /**
      * Settings related to the remote read feature.
+     *
+     * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_read">remote_read</a>
      */
-    private List<Object> remote_read;
+    private List<PrometheusRemoteReadConfig> remote_read;
 
     /**
      * Storage related settings that are runtime reloadable.

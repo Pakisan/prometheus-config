@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PrometheusScrapeAuthorization {
+public class PrometheusAuthorization {
 
     /**
      * Sets the authentication type of the request.

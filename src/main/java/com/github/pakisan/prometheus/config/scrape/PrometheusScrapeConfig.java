@@ -1,9 +1,9 @@
 package com.github.pakisan.prometheus.config.scrape;
 
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
-import com.github.pakisan.prometheus.config.auth.PrometheusScrapeAuthorization;
-import com.github.pakisan.prometheus.config.auth.PrometheusScrapeBasicAuth;
-import com.github.pakisan.prometheus.config.auth.PrometheusScrapeOAuth2;
+import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
+import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
+import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -112,20 +112,20 @@ public class PrometheusScrapeConfig {
      * configured username and password.
      * password and password_file are mutually exclusive.
      */
-    private PrometheusScrapeBasicAuth basic_auth;
+    private PrometheusBasicAuth basic_auth;
 
     /**
      * Sets the `Authorization` header on every scrape request with
      * the configured credentials.
      */
-    private PrometheusScrapeAuthorization authorization;
+    private PrometheusAuthorization authorization;
 
     /**
      * Optional OAuth 2.0 configuration.
      * <p>
      * Cannot be used at the same time as basic_auth or authorization.
      */
-    private PrometheusScrapeOAuth2 oauth2;
+    private PrometheusOAuth2 oauth2;
 
     /**
      * Configure whether scrape requests follow HTTP 3xx redirects.

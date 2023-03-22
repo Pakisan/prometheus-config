@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PrometheusScrapeBasicAuth {
+public class PrometheusBasicAuth {
 
     private String username;
     private String password;
