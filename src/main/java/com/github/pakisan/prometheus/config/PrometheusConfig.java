@@ -37,6 +37,8 @@ public class PrometheusConfig {
 
     /**
      * A list of scrape configurations.
+     *
+     * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config">scrape_config</a>
      */
     private List<Object> scrape_configs;
 
