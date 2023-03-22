@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config;
 
 import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
+import com.github.pakisan.prometheus.config.tracing.PrometheusTracingConfig;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -65,7 +66,9 @@ public class PrometheusConfig {
 
     /**
      * Configures exporting traces.
+     *
+     * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#tracing_config">tracing_config</a>
      */
-    private Object tracing;
+    private PrometheusTracingConfig tracing;
 
 }
