@@ -3,6 +3,7 @@ package com.github.pakisan.prometheus.config;
 import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
 import com.github.pakisan.prometheus.config.storage.PrometheusStorageConfig;
 import com.github.pakisan.prometheus.config.tracing.PrometheusTracingConfig;
+import com.github.pakisan.prometheus.config.write.PrometheusRemoteWriteConfig;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -52,8 +53,10 @@ public class PrometheusConfig {
 
     /**
      * Settings related to the remote write feature.
+     *
+     * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write">remote_write</a>
      */
-    private List<Object> remote_write;
+    private List<PrometheusRemoteWriteConfig> remote_write;
 
     /**
      * Settings related to the remote read feature.
