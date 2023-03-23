@@ -6,6 +6,7 @@ import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
 import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
 import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;
 import com.github.pakisan.prometheus.config.servicediscovery.AzureSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.ConsulSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -176,11 +177,10 @@ public class PrometheusScrapeConfig {
     /**
      * List of Consul service discovery configurations.
      * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#consul_sd_config">consul_sd_config</a>
      */
-    private List<Object> consul_sd_configs;
+    private List<ConsulSdConfig> consul_sd_configs;
 
     /**
      * List of DigitalOcean service discovery configurations.
