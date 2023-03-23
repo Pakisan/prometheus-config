@@ -19,7 +19,7 @@ import java.util.Map;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PrometheusGlobalSection {
+public class PrometheusGlobalConfig {
 
     /**
      * How frequently to scrape targets by default.

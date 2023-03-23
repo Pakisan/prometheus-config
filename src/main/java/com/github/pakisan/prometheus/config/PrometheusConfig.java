@@ -28,7 +28,7 @@ public class PrometheusConfig {
      * The global configuration specifies parameters that are valid in all other configuration contexts.
      * They also serve as defaults for other configuration sections.
      */
-    private PrometheusGlobalSection global;
+    private PrometheusGlobalConfig global;
 
     /**
      * Rule files specifies a list of globs. Rules and alerts are read from all matching files.
