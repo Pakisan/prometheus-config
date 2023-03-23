@@ -5,6 +5,7 @@ import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
 import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
 import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;
+import com.github.pakisan.prometheus.config.servicediscovery.AzureSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -123,12 +124,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of Azure service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#azure_sd_config">azure_sd_config</a>
      */
-    private List<Object> azure_sd_configs;
+    private List<AzureSdConfig> azure_sd_configs;
 
     /**
      * List of Consul service discovery configurations.
