@@ -1,5 +1,6 @@
-package com.github.pakisan.prometheus.config;
+package com.github.pakisan.prometheus.config.read;
 
+import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
 import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
 import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;

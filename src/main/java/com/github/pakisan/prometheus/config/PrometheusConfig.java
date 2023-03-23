@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config;
 
 import com.github.pakisan.prometheus.config.alert.PrometheusAlertManagerConfig;
+import com.github.pakisan.prometheus.config.read.PrometheusRemoteReadConfig;
 import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
 import com.github.pakisan.prometheus.config.storage.PrometheusStorageConfig;
 import com.github.pakisan.prometheus.config.tracing.PrometheusTracingConfig;
