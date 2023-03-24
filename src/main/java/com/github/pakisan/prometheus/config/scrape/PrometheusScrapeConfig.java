@@ -16,6 +16,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.EurekaSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.FileSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.GceSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.HetznerSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.HttpSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -256,12 +257,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of HTTP service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#http_sd_config">http_sd_config</a>
      */
-    private List<Object> http_sd_configs;
+    private List<HttpSdConfig> http_sd_configs;
 
     /**
      * List of IONOS service discovery configurations.
