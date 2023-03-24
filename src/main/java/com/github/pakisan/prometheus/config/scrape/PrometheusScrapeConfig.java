@@ -9,6 +9,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.AzureSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ConsulSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DigitaloceanSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.DockerSwarmSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -200,12 +201,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Docker Swarm service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#dockerswarm_sd_config">dockerswarm_sd_config</a>
      */
-    private List<Object> dockerswarm_sd_configs;
+    private List<DockerSwarmSdConfig> dockerswarm_sd_configs;
 
     /**
      * List of DNS service discovery configurations.
