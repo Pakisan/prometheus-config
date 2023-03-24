@@ -12,6 +12,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.DnsSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSwarmSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.Ec2SdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.EurekaSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -224,12 +225,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Eureka service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#eureka_sd_config">eureka_sd_config</a>
      */
-    private List<Object> eureka_sd_configs;
+    private List<EurekaSdConfig> eureka_sd_configs;
 
     /**
      * List of file service discovery configurations.
