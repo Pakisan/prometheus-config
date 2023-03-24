@@ -14,6 +14,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.DockerSwarmSdConfig
 import com.github.pakisan.prometheus.config.servicediscovery.Ec2SdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.EurekaSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.FileSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.GceSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -240,12 +241,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of GCE service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#gce_sd_config">gce_sd_config</a>
      */
-    private List<Object> gce_sd_configs;
+    private List<GceSdConfig> gce_sd_configs;
 
     /**
      * List of Hetzner service discovery configurations.
