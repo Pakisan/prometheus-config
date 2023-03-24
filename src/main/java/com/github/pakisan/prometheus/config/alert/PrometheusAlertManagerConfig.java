@@ -13,6 +13,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.DockerSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSwarmSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.Ec2SdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.EurekaSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.FileSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -188,12 +189,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of file service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#file_sd_config">file_sd_config</a>
      */
-    private List<Object> file_sd_configs;
+    private List<FileSdConfig> file_sd_configs;
 
     /**
      * List of GCE service discovery configurations.
