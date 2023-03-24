@@ -8,6 +8,7 @@ import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;
 import com.github.pakisan.prometheus.config.servicediscovery.AzureSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ConsulSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DigitaloceanSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.DockerSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -192,12 +193,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Docker service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#docker_sd_config">docker_sd_config</a>
      */
-    private List<Object> docker_sd_configs;
+    private List<DockerSdConfig> docker_sd_configs;
 
     /**
      * List of Docker Swarm service discovery configurations.
