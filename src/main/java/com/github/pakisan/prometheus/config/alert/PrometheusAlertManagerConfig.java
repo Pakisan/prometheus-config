@@ -8,6 +8,7 @@ import com.github.pakisan.prometheus.config.auth.PrometheusOAuth2;
 import com.github.pakisan.prometheus.config.servicediscovery.AzureSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ConsulSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DigitaloceanSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.DnsSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.DockerSwarmSdConfig;
 import lombok.AllArgsConstructor;
@@ -164,12 +165,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of DNS service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#dns_sd_config">dns_sd_config</a>
      */
-    private List<Object> dns_sd_configs;
+    private List<DnsSdConfig> dns_sd_configs;
 
     /**
      * List of EC2 service discovery configurations.
