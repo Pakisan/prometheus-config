@@ -23,6 +23,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.KumaSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.LightsailSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.LinodeSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.MarathonSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.NerveSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -312,12 +313,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of AirBnB's Nerve service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#nerve_sd_config">nerve_sd_config</a>
      */
-    private List<Object> nerve_sd_configs;
+    private List<NerveSdConfig> nerve_sd_configs;
 
     /**
      * List of Nomad service discovery configurations.
