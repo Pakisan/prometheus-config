@@ -21,6 +21,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.IonosSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.KubernetesSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.KumaSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.LightsailSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.LinodeSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -296,12 +297,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Linode service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#linode_sd_config">linode_sd_config</a>
      */
-    private List<Object> linode_sd_configs;
+    private List<LinodeSdConfig> linode_sd_configs;
 
     /**
      * List of Marathon service discovery configurations.
