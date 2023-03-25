@@ -19,6 +19,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.HetznerSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.HttpSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.IonosSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.KubernetesSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.KumaSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -280,12 +281,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Kuma service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#kuma_sd_config">kuma_sd_config</a>
      */
-    private List<Object> kuma_sd_configs;
+    private List<KumaSdConfig> kuma_sd_configs;
 
     /**
      * List of Lightsail service discovery configurations.
