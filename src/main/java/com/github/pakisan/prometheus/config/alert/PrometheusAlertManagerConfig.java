@@ -25,6 +25,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.LinodeSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.MarathonSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.NerveSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.NomadSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.OpenstackSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -284,12 +285,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of OpenStack service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#openstack_sd_config">openstack_sd_config</a>
      */
-    private List<Object> openstack_sd_configs;
+    private List<OpenstackSdConfig> openstack_sd_configs;
 
     /**
      * List of OVHcloud service discovery configurations.
