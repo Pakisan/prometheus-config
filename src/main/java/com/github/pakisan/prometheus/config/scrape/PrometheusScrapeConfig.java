@@ -1,5 +1,6 @@
 package com.github.pakisan.prometheus.config.scrape;
 
+import com.github.pakisan.prometheus.config.PrometheusMetricRelabelConfig;
 import com.github.pakisan.prometheus.config.PrometheusProtocolScheme;
 import com.github.pakisan.prometheus.config.PrometheusRelabelConfig;
 import com.github.pakisan.prometheus.config.PrometheusStaticConfig;
@@ -400,12 +401,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of metric relabel configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config">relabel_config</a>
      */
-    private List<Object> metric_relabel_configs;
+    private List<PrometheusMetricRelabelConfig> metric_relabel_configs;
 
     /**
      * An uncompressed response body larger than this many bytes will cause the
