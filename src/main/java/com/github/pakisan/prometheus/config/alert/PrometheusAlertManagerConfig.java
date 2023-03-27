@@ -24,6 +24,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.LightsailSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.LinodeSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.MarathonSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.NerveSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.NomadSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -276,12 +277,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of Nomad service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#nomad_sd_config">nomad_sd_config</a>
      */
-    private List<Object> nomad_sd_configs;
+    private List<NomadSdConfig> nomad_sd_configs;
 
     /**
      * List of OpenStack service discovery configurations.
