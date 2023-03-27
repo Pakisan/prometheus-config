@@ -1,6 +1,6 @@
 package com.github.pakisan.prometheus.config;
 
-import com.github.pakisan.prometheus.config.alert.PrometheusAlertManagerConfig;
+import com.github.pakisan.prometheus.config.alert.PrometheusAlertingConfig;
 import com.github.pakisan.prometheus.config.read.PrometheusRemoteReadConfig;
 import com.github.pakisan.prometheus.config.scrape.PrometheusScrapeConfig;
 import com.github.pakisan.prometheus.config.storage.PrometheusStorageConfig;
@@ -50,10 +50,8 @@ public class PrometheusConfig {
 
     /**
      * Alerting specifies settings related to the Alertmanager.
-     *
-     * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#alertmanager_config">alertmanager_config</a>
      */
-    private PrometheusAlertManagerConfig alerting;
+    private PrometheusAlertingConfig alerting;
 
     /**
      * Settings related to the remote write feature.
