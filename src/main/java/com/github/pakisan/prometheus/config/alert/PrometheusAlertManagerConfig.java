@@ -28,6 +28,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.NomadSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.OpenstackSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.OvhcloudSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.PuppetdbSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.ScalewaySdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -308,12 +309,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of Scaleway service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scaleway_sd_config">scaleway_sd_config</a>
      */
-    private List<Object> scaleway_sd_configs;
+    private List<ScalewaySdConfig> scaleway_sd_configs;
 
     /**
      * List of Zookeeper Serverset service discovery configurations.
