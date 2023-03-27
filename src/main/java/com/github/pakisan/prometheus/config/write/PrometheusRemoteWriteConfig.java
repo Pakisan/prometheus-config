@@ -1,5 +1,6 @@
 package com.github.pakisan.prometheus.config.write;
 
+import com.github.pakisan.prometheus.config.PrometheusRelabelConfig;
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
 import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
@@ -47,12 +48,10 @@ public class PrometheusRemoteWriteConfig {
 
     /**
      * List of remote write relabel configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config">relabel_config</a>
      */
-    private List<Object> write_relabel_configs;
+    private List<PrometheusRelabelConfig> write_relabel_configs;
 
     /**
      * Name of the remote write config, which if specified must be unique among remote write configs.
