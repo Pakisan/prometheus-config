@@ -27,6 +27,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.NerveSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.NomadSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.OpenstackSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.OvhcloudSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.PuppetdbSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -300,12 +301,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of PuppetDB service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#puppetdb_sd_config">puppetdb_sd_config</a>
      */
-    private List<Object> puppetdb_sd_configs;
+    private List<PuppetdbSdConfig> puppetdb_sd_configs;
 
     /**
      * List of Scaleway service discovery configurations.
