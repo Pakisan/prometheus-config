@@ -32,6 +32,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.ScalewaySdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ServersetSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.TritonSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.UyuniSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.VultrSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -340,12 +341,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of Vultr service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#vultr_sd_config">vultr_sd_config</a>
      */
-    private List<Object> vultr_sd_configs;
+    private List<VultrSdConfig> vultr_sd_configs;
 
     /**
      * List of labeled statically configured targets for this job.
