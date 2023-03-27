@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config.alert;
 
 import com.github.pakisan.prometheus.config.PrometheusProtocolScheme;
+import com.github.pakisan.prometheus.config.PrometheusStaticConfig;
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
 import com.github.pakisan.prometheus.config.auth.PrometheusBasicAuth;
@@ -348,12 +349,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of labeled statically configured targets for this job.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#static_config">static_config</a>
      */
-    private List<Object> static_configs;
+    private List<PrometheusStaticConfig> static_configs;
 
     /**
      * List of target relabel configurations.
