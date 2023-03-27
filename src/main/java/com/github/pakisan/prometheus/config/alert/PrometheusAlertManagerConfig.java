@@ -31,6 +31,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.PuppetdbSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ScalewaySdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ServersetSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.TritonSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.UyuniSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -332,12 +333,10 @@ public class PrometheusAlertManagerConfig {
 
     /**
      * List of Uyuni service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#uyuni_sd_config">uyuni_sd_config</a>
      */
-    private List<Object> uyuni_sd_configs;
+    private List<UyuniSdConfig> uyuni_sd_configs;
 
     /**
      * List of Vultr service discovery configurations.
