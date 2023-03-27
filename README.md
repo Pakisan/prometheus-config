@@ -1,6 +1,8 @@
 ## Overview
 JVM-friendly [Prometheus configuration](https://prometheus.io/docs/prometheus/latest/configuration/configuration/). It allows you to read or write config through code
 
+Based on Prometheus 2.43
+
 ## Contributors section
 
 ### Build
