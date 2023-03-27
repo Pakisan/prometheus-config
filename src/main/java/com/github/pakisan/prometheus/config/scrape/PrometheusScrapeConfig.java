@@ -1,6 +1,7 @@
 package com.github.pakisan.prometheus.config.scrape;
 
 import com.github.pakisan.prometheus.config.PrometheusProtocolScheme;
+import com.github.pakisan.prometheus.config.PrometheusRelabelConfig;
 import com.github.pakisan.prometheus.config.PrometheusStaticConfig;
 import com.github.pakisan.prometheus.config.PrometheusTlsConfig;
 import com.github.pakisan.prometheus.config.auth.PrometheusAuthorization;
@@ -392,12 +393,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of target relabel configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#relabel_config">relabel_config</a>
      */
-    private List<Object> relabel_configs;
+    private List<PrometheusRelabelConfig> relabel_configs;
 
     /**
      * List of metric relabel configurations.
