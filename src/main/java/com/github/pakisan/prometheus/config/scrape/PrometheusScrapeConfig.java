@@ -30,6 +30,7 @@ import com.github.pakisan.prometheus.config.servicediscovery.OvhcloudSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.PuppetdbSdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ScalewaySdConfig;
 import com.github.pakisan.prometheus.config.servicediscovery.ServersetSdConfig;
+import com.github.pakisan.prometheus.config.servicediscovery.TritonSdConfig;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -368,12 +369,10 @@ public class PrometheusScrapeConfig {
 
     /**
      * List of Triton service discovery configurations.
-     * <p>
-     * TODO: implement
      *
      * @see <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#triton_sd_config">triton_sd_config</a>
      */
-    private List<Object> triton_sd_configs;
+    private List<TritonSdConfig> triton_sd_configs;
 
     /**
      * List of Uyuni service discovery configurations.
